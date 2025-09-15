@@ -40,27 +40,27 @@ This project was developed on **Windows** using **WSL (Windows Subsystem for Lin
 
 - **Your PC (Server)**
 1. sds@SDSpc:~$ 
-```bash
-hostname -I
-```
+   ```bash
+   hostname -I
+   ```
    - 192.168.1.100
 
 3. sds@SDSpc:~$ 
-```bash
-./server 9000 jokes.txt
-```
+   ```bash
+   ./server 9000 jokes.txt
+   ```
    - Loaded 15 jokes.
    - Server listening on port 9000
 
 - **Other PC (Client):**
 1. friend@OtherPC:~$ 
-```bash
-g++ -pthread -std=c++17 client.cpp -o client
-```
+   ```bash
+   g++ -pthread -std=c++17 client.cpp -o client
+   ```
 2. friend@OtherPC:~$ 
-```bash 
-./client 192.168.1.100 9000
-```
+   ```bash 
+   ./client 192.168.1.100 9000
+   ```
    - Connected to server 192.168.1.100:9000
    - Server: Knock knock!
    - Client: Who's there?
