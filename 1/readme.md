@@ -15,7 +15,7 @@ This project was developed on **Windows** using **WSL (Windows Subsystem for Lin
    - `g++` (for compiling the code)
    - `make` (for building the project)
 
-### **Steps to Run**
+### **Steps to Run Same Machine**
 1. Open a terminal in WSL and navigate to the project directory.
 2. Build the project using:
    ```bash
@@ -34,6 +34,24 @@ This project was developed on **Windows** using **WSL (Windows Subsystem for Lin
    ```
    - `127.0.0.1` is the localhost IP address.
    - `9000` is the port number the client will connect to.
+
+---
+### **Steps to Run Different Machine**
+
+- **Your PC (Server)**
+1. sds@SDSpc:~$ hostname -I
+2. 192.168.1.100
+
+3. sds@SDSpc:~$ ./server 9000 jokes.txt
+   - Loaded 15 jokes.
+   - Server listening on port 9000
+
+- **Other PC (Client):**
+1. friend@OtherPC:~$ g++ -pthread -std=c++17 client.cpp -o client
+2. friend@OtherPC:~$ ./client 192.168.1.100 9000
+   - Connected to server 192.168.1.100:9000
+   - Server: Knock knock!
+   - Client: Who's there?
 
 ---
 
