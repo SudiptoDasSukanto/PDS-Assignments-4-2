@@ -39,16 +39,28 @@ This project was developed on **Windows** using **WSL (Windows Subsystem for Lin
 ### **Steps to Run Different Machine**
 
 - **Your PC (Server)**
-1. sds@SDSpc:~$ hostname -I
-2. 192.168.1.100
+1. sds@SDSpc:~$ 
+```bash
+hostname -I
+```
+   - 192.168.1.100
 
-3. sds@SDSpc:~$ ./server 9000 jokes.txt
+3. sds@SDSpc:~$ 
+```bash
+./server 9000 jokes.txt
+```
    - Loaded 15 jokes.
    - Server listening on port 9000
 
 - **Other PC (Client):**
-1. friend@OtherPC:~$ g++ -pthread -std=c++17 client.cpp -o client
-2. friend@OtherPC:~$ ./client 192.168.1.100 9000
+1. friend@OtherPC:~$ 
+```bash
+g++ -pthread -std=c++17 client.cpp -o client
+```
+2. friend@OtherPC:~$ 
+```bash 
+./client 192.168.1.100 9000
+```
    - Connected to server 192.168.1.100:9000
    - Server: Knock knock!
    - Client: Who's there?
